@@ -3,8 +3,6 @@ name: Create YouTube Plus app
 on:
   workflow_dispatch:
     inputs:
-
-     
      enable_ytabconfig:
         description: "Integrate YTABConfig"
         type: boolean
@@ -195,7 +193,6 @@ jobs:
         env:
           THEOS: ${{ github.workspace }}/theos
 
-          
       - name: Clone YTABConfig
         if: ${{ inputs.enable_ytabconfig }}
         run: |
@@ -338,4 +335,4 @@ jobs:
 
       - name: Output Release URL
         run: |
-          echo "::notice::Release available at: https://github.com/${{ github.repository }}/releases"
+          echo "::notice::Bản phát hành có sẵn tại: https://github.com/${{ github.repository }}/releases"
