@@ -62,7 +62,7 @@ jobs:
         id: theos
         uses: actions/cache@v5
         env:
-          cache-name: theos_cache_9bc7340
+          cache-name: theos_cache_sdk18.6
         with:
           path: theos/
           key: ${{ env.cache-name }}
@@ -82,7 +82,7 @@ jobs:
         run: |
           git clone --quiet -n --depth=1 --filter=tree:0 https://github.com/theos/sdks/
           cd sdks
-          git sparse-checkout set --no-cone iPhoneOS16.5.sdk
+          git sparse-checkout set --no-cone iPhoneOS18.6.sdk
           git checkout
           mv *.sdk $THEOS/sdks
 
